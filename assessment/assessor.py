@@ -18,6 +18,7 @@ def assess(student_strategy, n_match = 1000):
     losses = 0
     forfeits = 0
 
+    print("Assessing student strategy...")
     for i_match in range(n_match):
         print("Beginning game {} of {}.".format(i_match + 1, n_match), end="\r")
 
