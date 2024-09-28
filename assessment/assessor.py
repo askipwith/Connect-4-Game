@@ -11,8 +11,7 @@ def calculate_mark(wins, draws, forfeits, n_match):
     return 0.25 * (n_match - forfeits) / n_match + 0.75 * ((wins + 0.5 * draws) / n_match) ** 3
 
 
-def assess(student_strategy):
-    n_match = 1000
+def assess(student_strategy, n_match = 1000):
 
     wins = 0
     draws = 0
@@ -41,4 +40,4 @@ def assess(student_strategy):
 
 
 if __name__ == "__main__":
-    assess(random_strategies.simple)
+    assess(random_strategies.simple, 1000)
