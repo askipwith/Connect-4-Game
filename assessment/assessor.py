@@ -22,7 +22,14 @@ def assess(student_strategy, n_match = 1000):
     for i_match in range(n_match):
         print("Beginning game {} of {}.".format(i_match + 1, n_match), end="\r")
 
-        result = run_game("Student", "Opponent", student_strategy, random_opponent, print_output=False, max_move_time=1, randomise_first_player=True)
+        result = run_game(
+            "Student",
+            "Opponent",
+            student_strategy,
+            random_opponent,
+            print_output=False,
+            # max_move_time=1,
+            randomise_first_player=True)
 
         if result[0] == 1:
             wins += 1
@@ -41,4 +48,4 @@ def assess(student_strategy, n_match = 1000):
 
 
 if __name__ == "__main__":
-    assess(random_strategies.simple, 1000)
+    assess(random_strategies.simple)
